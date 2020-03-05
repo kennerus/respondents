@@ -5,7 +5,7 @@ export const routes = [
     path: '/',
     name: 'defaultLayout',
     component: Layout,
-    redirect: '/polls',
+    redirect: '/polls/create',
     children: [
       {
         path: '/profile/:id',

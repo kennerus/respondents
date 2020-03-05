@@ -42,7 +42,8 @@
           /
         </router-link>
 
-        <span class="breadcrubms__el breadcrubms__el_active">Добавить опрос</span>
+        <span class="breadcrubms__el breadcrubms__el_active" v-if="$route.name === 'pollsCreate'">Добавить опрос</span>
+        <router-link class="breadcrubms__el" to="/polls/create" v-else>Добавить опрос</router-link>
       </nav>
       
       <router-view class="container"></router-view>
