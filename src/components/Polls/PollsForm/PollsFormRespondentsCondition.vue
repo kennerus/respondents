@@ -28,6 +28,7 @@
           <InputTextRange v-model="value.data[index]" v-if="value.type === 'age'" />
           <BaseSelect :options="types[value.type].options"
                       v-model="value.data[index]"
+                      v-else
           />
         </td>
       </tr>
@@ -80,6 +81,11 @@
       },
       canRemoveCondition: {
         type: Boolean,
+      }
+    },
+    watch: {
+      'value.type'(type) {
+        this.condition = type;
       }
     },
     data() {
